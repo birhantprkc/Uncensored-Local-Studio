@@ -1,4 +1,4 @@
-#  Uncensored AI Studio
+#  Portable AI Studio
 
 <p align="center">
   <strong>A premium, zero-configuration local AI studio and offline GUI for Stable Diffusion (Image Generation), LLMs (Chat), Whisper (Speech-to-Text), and Kokoro (Text-to-Speech). Powered by hardware-accelerated GPU and NPU execution on Windows, Linux, and macOS.</strong>
@@ -24,7 +24,7 @@
 
 
 ## 📖 Table of Contents
-* [What is Uncensored AI Studio?](#what-is-uncensored-ai-studio)
+* [What is Portable AI Studio?](#what-is-uncensored-ai-studio)
 * [Key Features](#key-features)
 * [Workspace & Engine Architecture](#workspace-architecture)
 * [Supported Models](#supported-models)
@@ -40,9 +40,9 @@
 
 ---
 
-## <a id="what-is-uncensored-ai-studio"></a>📖 What is Uncensored AI Studio?
+## <a id="what-is-uncensored-ai-studio"></a>📖 What is Portable AI Studio?
 
-**Uncensored AI Studio** is a completely offline, zero-setup, self-contained AI studio for Windows, Linux, and macOS. Unlike cloud-based AI systems, it runs entirely on your own hardware with no censorship, tracking, subscriptions, or login requirements.
+**Portable AI Studio** is a completely offline, zero-setup, self-contained AI studio for Windows, Linux, and macOS. Unlike cloud-based AI systems, it runs entirely on your own hardware with no censorship, tracking, subscriptions, or login requirements.
 
 It unifies four major local AI capabilities into one high-performance desktop interface:
 1. **🎨 Image Generation (Stable Diffusion):** Generate and edit high-quality images offline using `.safetensors`, `.gguf`, or `.ckpt` model weights.
@@ -117,7 +117,7 @@ Known-good image models available from the Model Manager:
 ## <a id="folder-architecture"></a>📁 Folder Architecture
 
 ```
-Uncensored-AI-Studio/
+Portable-AI-Studio/
 ├── windows.bat                # Windows Launcher (Double-click entrypoint)
 ├── linux.sh                   # Linux Launcher (Terminal entrypoint)
 ├── mac.sh                     # macOS Launcher (Terminal entrypoint)
@@ -305,7 +305,7 @@ cmake .. -DSD_METAL=ON -DSD_BUILD_SHARED_LIBS=ON -DCMAKE_BUILD_TYPE=Release
 cmake --build . --config Release -j$(getconf _NPROCESSORS_ONLN 2>/dev/null || sysctl -n hw.ncpu)
 
 # 4. Copy the binaries into this project
-cp bin/sd* /path/to/Uncensored-AI-Studio/app/backend/linux/<backend>/
+cp bin/sd* /path/to/Portable-AI-Studio/app/backend/linux/<backend>/
 ```
 
 After copying, rename the server binary to match what `scripts/server/serve.cjs` expects:
